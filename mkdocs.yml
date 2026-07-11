@@ -1,0 +1,46 @@
+site_name: go-newsgroups
+site_description: "Pure-Go Usenet: NNTP, yEnc, NZB, Newznab search, PAR2 (AutoPAR)."
+site_url: https://go-newsgroups.github.io/docs/
+repo_url: https://github.com/go-newsgroups
+repo_name: go-newsgroups
+edit_uri: ""
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle: { icon: material/weather-sunny, name: Light mode }
+  features: [navigation.sections, navigation.top, content.code.copy, search.suggest]
+
+extra_css: [stylesheets/brand.css]
+extra:
+  version:
+    provider: mike
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight
+
+nav:
+  - Home: index.md
+  - Packages:
+      - Overview: packages/index.md
+      - newznab: packages/newznab.md
+      - nntp: packages/nntp.md
+      - nzb: packages/nzb.md
+      - par2: packages/par2.md
+      - yenc: packages/yenc.md
